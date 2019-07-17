@@ -46,15 +46,20 @@ public class ChangeMaker {
 		int rNickels = remainder / nickels;
 		int rPennies = remainder % nickels;
 		
-		if (rQuarters != 0) {
-			result = result + rQuarters + " Quarters ";
-		}if (rDimes != 0) {
-			result = result + rDimes + " Dimes ";
-		}if (rNickels != 0) {
-			result = result + rNickels + " Nickels ";
-		}if (rPennies != 0) {
-			result = result + rPennies + " Pennies";
+		if (change > 1 && change <99) {
+			if (rQuarters != 0) {
+				result = result + rQuarters + " Quarters ";
+			}if (rDimes != 0) {
+				result = result + rDimes + " Dimes ";
+			}if (rNickels != 0) {
+				result = result + rNickels + " Nickels ";
+			}if (rPennies != 0) {
+				result = result + rPennies + " Pennies";
+			}
+		}else {
+			result = "Invalid change amount.";
 		}
+		
 		return result;
 	}	
 }
